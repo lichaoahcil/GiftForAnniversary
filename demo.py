@@ -26,11 +26,11 @@ def transform2(image_file):
     return codePic
 
 
-fp = open(u'nyp.jpg','rb')
+fp = open(u'yourimage.jpg','rb')
 image_file = Image.open(fp)
-image_file=image_file.resize((int(image_file.size[0]/2), int(image_file.size[1]/8)))#调整图片大小
+image_file=image_file.resize((int(image_file.size[0]/2), int(image_file.size[1]/8)))  #调整图片大小
 print u'Info:',image_file.size[0],' ',image_file.size[1],' ',count
 
-tmp = open('tmp.txt','w')
+tmp = open('yourtext.txt','w')
 tmp.write(transform1(image_file))
 tmp.close()
